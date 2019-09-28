@@ -10,33 +10,27 @@
 
 <h1>Get Giphy With It!</h1>
 
-<div class="container">
     <!-- buttons will live here -->
-    <div id="search-buttons"></div>
-<!-- images will populate here -->
-<div id="images">
-</div>
+    <button data-vacation="snorkel">Snorkel</button>
+    <button data-vacation="ski">Ski</button>
+    <button data-vacation="hike">Hike</button>
+   <!-- images will populate here -->
+    <div id="images"></div>
+
 <div class="user-area">
     <form id="user-form">
         <label for="user-input">What's Your Dream?</label>
-        <input id="theme" type="submit" value="Vaction Vibes">
+        <input id="user-themes" type="submit" value="Vaction Vibes">
     </form>
 </div>
 
-<!-- PsuedoCode Baby -->
-<!-- create an array of strings each on a topic that interests me.
-save them to a variable called 'topics'
-take in the topics and create buttons; try to use a loop
-when user clicks the button, it should grab 10 static images and  place on the page
-when the user clicks on the image it should become ainmated, if they click again it becomes static again
-under each gif, display the rating
-add a form that takes a value from a user input box and adds it to your "topics" array then make a function call that takes each topc in the array and remakes the buttons on the page -->
+
 
 
     <!-- jQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Script -->
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script type="text/javascript" src="assets/javascript/giphy.js"></script>
 </body>
 </html>
