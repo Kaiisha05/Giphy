@@ -29,6 +29,8 @@ var p = $("<p>").text("Rating: " + results[v].rating);
 var activityImage = $("<img>");
 // set the src attribute fof the image to a property pulled of the result item
 activityImage.attr("src", results[v].images.fixed_height.url);
+// add an alt to the image
+activityImage.attr("alt", "original image");
 // append/prepend?? the paragraph and image tag to the images Div
 $("#images").prepend(p);
 $("#images").prepend(activityImage);
