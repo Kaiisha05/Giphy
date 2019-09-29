@@ -17,28 +17,23 @@ $("button").on("click" , function() {
 
         console.log(response);
 
-    })
-});
-// create an array of strings each on a topic that interests me.
-// var activity = [snorkel, mountains, lakehouse, snow, romantic];
-// function to display the array on buttons
-// function renderButtons () {
-    // to avoide repeat buttons
-    // $("#search-buttons").empty();
-    // loop through the array
-    // for (var v=0; v < activity.length; v++) {
-        // use jquery to create the buttons
-        // var t = $("<button>");
-        // add a class to the button
-        // t.addClass("vacations");
-        // add a data attribute
-        // t.attr("data-theme", vacation[v]);
-        // provide the text for the button 
-        // t.text(vacation[v]);
-        // apend the button to the html
-//         $("#pre-set-themes").append(t);
-//     }
-// }
+
+
+// store the results from the AJAX request
+var results = response.data;
+// loop through the results of each item
+for (var v=0; v < results.length; v++) {
+// create paragraph tag for the rating to be displayed
+var p = $("<p>").text("Rating: " + results[v].rating);
+// create and store an image tag for the results 
+var activityImage = $("<img>");
+// set the src attribute fof the image to a property pulled of the result item
+activityImage.attr("src", results[v].images.fixed_height.url);
+// append/prepend?? the paragraph and image tag to the images Div
+$("#images").prepend(p);
+$("#images").prepend(activityImage);
+
+}
 // save them to a variable called 'topics'
 // take in the topics and create buttons; try to use a loop
 // when user clicks the button, it should grab 10 static images and  place on the page
@@ -47,3 +42,5 @@ $("button").on("click" , function() {
 // add a form that takes a value from a user input box and adds it to your "topics" array then make a function call that takes each topc in the array and remakes the buttons on the page
 
 // api key Qjm8YG8TDr4sLhk6ALd24DSOtVcxixje
+})
+});

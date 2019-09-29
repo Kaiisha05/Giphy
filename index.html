@@ -11,21 +11,27 @@
 <h1>Get Giphy With It!</h1>
 
     <!-- buttons will live here -->
-    <button data-vacation="snorkel">Snorkel</button>
-    <button data-vacation="ski">Ski</button>
-    <button data-vacation="hike">Hike</button>
-   <!-- images will populate here -->
+    <button data-activity="snorkel">Snorkel</button>
+    <button data-activity="ski">Ski</button>
+    <button data-activity="hike">Hike</button>
+    <br>
+
+    <!--can we make this into a table, input has its own column???  -->
+   
+    <div class="user-area">
+        <form id="user-form">
+            <label for="user-input">What's Your Dream?</label>
+            <!-- allows the user to input thier vacation idea -->
+            <input type="text" id="activity-input"><br>
+            <!-- button to add vacation activity idea-->
+            <input id="user-themes" type="submit" value="Vaction Vibes">
+        </form>
+    </div>
+    <br>
+       <!-- images will populate here -->
     <div id="images"></div>
 
-<div class="user-area">
-    <form id="user-form">
-        <label for="user-input">What's Your Dream?</label>
-        <!-- allows the user to input thier vacation idea -->
-        <input type="text" id="vacation-input"><br>
-        <!-- button to add vacation idea-->
-        <input id="user-themes" type="submit" value="Vaction Vibes">
-    </form>
-</div>
+
 
 
 
