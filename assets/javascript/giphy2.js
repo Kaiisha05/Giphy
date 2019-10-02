@@ -1,11 +1,11 @@
-var animals = ["dog", "cat", "bird", "rabbit"];
-console.log(animals)
+var activities = ["ski", "swim", "bike", "snorkel"];
+console.log(activities)
 
-// adding changes below - function display animal images
-function displayAnimalImages() {
-    var animal = $(this).attr("data-name");
+// adding changes below - function display Activity Images
+function displayActivityImages() {
+    var activity = $(this).attr("data-name");
     // console.log(this);
-    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=Qjm8YG8TDr4sLhk6ALd24DSOtVcxixje&q=" + animal + "&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=Qjm8YG8TDr4sLhk6ALd24DSOtVcxixje&q=" + activity + "&limit=10";
     // console.log(queryURL);
     // console.log(animal);
 
@@ -16,7 +16,7 @@ function displayAnimalImages() {
         method: "GET"
     }).then(function (response) {
 
-        var animalDiv = $("<div class='animal'>");
+        var activityDiv = $("<div class='activity'>");
         var rating = response.data.rating;
         console.log(results);
 
@@ -33,10 +33,10 @@ function displayAnimalImages() {
         var image = $("<img>").attr("src", imageURL);
 
         // append the image
-        animalDiv.append(image);
+        activityDiv.append(image);
 
         // putting the animal and it's rating above the previous animal
-        $("#images-holder").prepend(animalDiv);
+        $("#images-holder").prepend(activityDiv);
     });
 
 }
@@ -47,17 +47,17 @@ function renderButtons() {
 
 $("#buttons-holder").empty();
     // loop through the array of movies
-    for (let v = 0; v < animals.length; v++) {
+    for (let v = 0; v < activities.length; v++) {
 
         // dynamically generate the uttons for each animal in the array
 
         var a = $("<button>");
         // adding a class of animal-btn to my button
-        a.addClass("animal-btn");
+        a.addClass("activity-btn");
         // adding a data-attribute 
-        a.attr("data-name", animals[v]);
+        a.attr("data-name", activities[v]);
         // providing the initial button text
-        a.text(animals[v]);
+        a.text(activities[v]);
         // adding the button to the buttons div
         $("#buttons-holder").append(a);
 
@@ -67,21 +67,21 @@ $("#buttons-holder").empty();
 
 
 // this function handles events when an animal button is clicked
-$("#user-idea").on("click", function (event) {
+$("#add-activity").on("click", function (event) {
     event.preventDefault();
     // this line grabs the input from the textbox
-    var animal = $("#user-input").val().trim();
+    var activity = $("#user-input").val().trim();
 
     // adding movie from the textbox to our array
-    animals.push(animal);
-    $("#buttons-holder").empty();
+    activities.push(activity);
+    // $("#buttons-holder").empty();
     // calling renderButtons which handles the processing of the animal array
     renderButtons();
    
 });
 
 // adding a clicked event listener to all elements with a class of "animal-btn"
-$(document).on("click", "animal-btn", displayAnimalImages);
+$(document).on("click", "activity-btn", displayActivityImages);
 
 // calling the renderButtons function to display the initial buttons
 renderButtons();
