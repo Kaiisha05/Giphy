@@ -19,7 +19,7 @@ var activities = ["Bike", "Hike", "Snorkel"];
     // define the variable activity
     // store the url for giphy to search for a specific "topic" set the limit to 10...shouldn't need to establish paramters for the ratings
 
-    var activity = $(this).attr("data-name");
+    var activity = $(this).attr("data-activity");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + activity + "&api_key=Qjm8YG8TDr4sLhk6ALd24DSOtVcxixje&limit=10";
 
     // perform an AJAX request with the queryURL
@@ -36,10 +36,14 @@ var activities = ["Bike", "Hike", "Snorkel"];
     function renderButtons () {
         $("#buttons-holder").empty();
 
-        for (let k=0; k < activities.length; k++);
+        for (let k=0; k < activities.length; k++); {
+         
         var a=$("<button>");
         a.addClass("#activity-button");
         a.attr("data-activity", activities[k]);
         a.text(activities[k]);
         $("#buttons-holder").append(a);
+ 
     }
+}
+function renderButtons ();
