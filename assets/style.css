@@ -1,0 +1,55 @@
+body {
+    background-image: url(https://images.unsplash.com/photo-1496862831786-3fdc3d8747be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60);
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+}
+
+.activity-btn {
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 5px;
+    background-color:rgb(77, 158, 187);
+    border: rgb(4, 36, 50) 1.5px solid;
+    color: white;
+    padding: 4px 8px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+
+}
+.activity-btn:hover {
+    background-color: white; 
+    color: rgb(77, 158, 187);
+  }
+
+label {
+      font-size:36px;
+  }
+
+  .user-area {
+      margin: 40px;
+   
+  }
+
+  #user-input {
+    font-size:16px;
+  }
+  #add-activity
+  { background-color: white; 
+    color: rgb(77, 158, 187);
+    border-radius: 5px;
+    padding: 4px 8px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    margin: 10px;
+    font-size:16px;
+  }
+
+  #add-activity:hover {
+    background-color:rgb(77, 158, 187);
+    border: rgb(4, 36, 50) 1.5px solid;
+    color: white;
+  }

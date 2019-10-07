@@ -16,7 +16,8 @@ function displayActivityImages() {
         method: "GET"
     }).then(function (response) {
 
-        var activityDiv = $("<div class='activity'>");
+        var activityDiv = $("<div>");
+        activityDiv.addClass("activity");
         var rating = response.data.rating;
         console.log(rating);
 
