@@ -7,7 +7,7 @@ function displayActivityImages() {
     // console.log(this);
     var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=Qjm8YG8TDr4sLhk6ALd24DSOtVcxixje&q=" + activity + "&limit=10";
     // console.log(queryURL);
-    // console.log(animal);
+    // console.log(activity);
 
 
 
@@ -18,12 +18,12 @@ function displayActivityImages() {
 
         var activityDiv = $("<div class='activity'>");
         var rating = response.data.rating;
-        console.log(results);
+        console.log(rating);
 
         var para = $("<p>").text("Rating: " + rating);
 
         // display the rating
-        animalDiv.append(para);
+        activityDiv.append(para);
 
         // retrieving the URL for the image
         var imageURL = response.data.images.fixed_height_still.url;
@@ -35,24 +35,24 @@ function displayActivityImages() {
         // append the image
         activityDiv.append(image);
 
-        // putting the animal and it's rating above the previous animal
+        // putting the activity and it's rating above the previous activiy
         $("#images-holder").prepend(activityDiv);
     });
 
 }
 
 
-// function for displaying animal info
+// function for displaying activity info
 function renderButtons() {
 
 $("#buttons-holder").empty();
     // loop through the array of movies
     for (let v = 0; v < activities.length; v++) {
 
-        // dynamically generate the uttons for each animal in the array
+        // dynamically generate the buttons for each activity in the array
 
         var a = $("<button>");
-        // adding a class of animal-btn to my button
+        // adding a class of activity-btn to my button
         a.addClass("activity-btn");
         // adding a data-attribute 
         a.attr("data-name", activities[v]);
@@ -66,7 +66,7 @@ $("#buttons-holder").empty();
 }
 
 
-// this function handles events when an animal button is clicked
+// this function handles events when an activity button is clicked
 $("#add-activity").on("click", function (event) {
     event.preventDefault();
     // this line grabs the input from the textbox
@@ -75,12 +75,12 @@ $("#add-activity").on("click", function (event) {
     // adding movie from the textbox to our array
     activities.push(activity);
     // $("#buttons-holder").empty();
-    // calling renderButtons which handles the processing of the animal array
+    // calling renderButtons which handles the processing of the actiivty array
     renderButtons();
    
 });
 
-// adding a clicked event listener to all elements with a class of "animal-btn"
+// adding a clicked event listener to all elements with a class of "button"
 $(document).on("click", "activity-btn", displayActivityImages);
 
 // calling the renderButtons function to display the initial buttons
@@ -88,64 +88,3 @@ renderButtons();
 
 
 
-
-
-// for (var a = 0; a < results.length; a++) {
-//     var rating = results[a].rating;
-// console.log(rating);
-
-
-// console.log(p);
-
-// animalDiv.append(p);
-// console.log(animalDiv);
-
-// var imageURL = results[a].images.fixed_height_still.url;
-// console.log(imageURL);
-
-// var image = $("<img>").attr("src", imageURL);
-// console.log(image);
-
-// animalDiv.append(image);
-// console.log(animalDiv);
-
-// $("#images-holder").prepend(animalDiv);
-//         }
-
-//     })
-// }
-
-
-// function renderButtons() {
-//     $("#buttons-holder").empty();
-//     // for (var i = 0; i < animals.length; i++); {
-//     for (let i = 0; i < animals.length; i++) {
-//         console.log(i);
-//         console.log(animals[i]);
-//         var b = $("<button>");
-
-//         b.addClass("animal-button");
-
-//         b.attr("data-name", animals[i]);
-
-//         b.text(animals[i]);
-//         console.log(b);
-//         $("#buttons-holder").append(b);
-//     }
-
-// }
-
-// $("user-idea").on("click", function (event) {
-//     event.preventDefault();
-
-//     var animal = $("#user-input").val().trim();
-
-//     animals.push(animal);
-
-//     // nothing happens...
-//     renderButtons();
-
-// });
-
-// $(document).on("click", "animal-button", displayAnimalImages);
-// renderButtons();
