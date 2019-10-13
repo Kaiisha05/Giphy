@@ -1,44 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Get Giphy With It</title>
 
-  
+
     <!-- <link href="https://fonts.googleapis.com/css?family=Vibes&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="assets/style.css">
-    </head>
-<body>
-<div class="container">
-<h1>Get Giphy With It</h1>
+</head>
 
-  <!-- buttons will live here -->
-<div id="buttons-holder"></div>
-  
-    <!-- <button data-activity="snorkel">Snorkel</button>
+<body>
+    <div class="container">
+        <h1>Get Giphy With It</h1>
+
+        <!-- buttons will live here -->
+        <div id="buttons-holder"></div>
+
+        <!-- <button data-activity="snorkel">Snorkel</button>
     <button data-activity="ski">Ski</button>
     <button data-activity="hike">Hike</button> -->
-    <br>
+        <br>
 
-    <!--can we make this into a table, input has its own column???  -->
-   
-    <div class="user-area">
-        <form id="user-form">
-            <label for="user-input">What's Your Dream Vacation Activity?</label>
-            <!-- allows the user to input thier vacation idea -->
-            <br>
-            <input type="text" id="user-input">
-            <!-- button to add vacation activity idea-->
-            <input id="add-activity" type="submit" value="Vaction Vibes">
-        </form>
+        <!--can we make this into a table, input has its own column???  -->
+
+        <div class="user-area">
+            <form id="user-form">
+                <label for="user-input">What's Your Dream Vacation Activity?</label>
+                <!-- allows the user to input thier vacation idea -->
+                <br>
+                <input type="text" id="user-input">
+                <!-- button to add vacation activity idea-->
+                <input id="add-activity" type="submit" value="Vaction Vibes">
+            </form>
+        </div>
+        <br>
+        <!-- images will populate here -->
+        <div class="card">
+            <div class="card-rating"></div>
+            <div id="images-holder"></div>
+        </div>
+
+
+
     </div>
-    <br>
-       <!-- images will populate here -->
-    <div id="images-holder"></div>
-
-</div>
 
 
 
@@ -51,4 +58,5 @@
     <script type="text/javascript" src="assets/javascript/giphy2.js"></script>
     <!-- <script type="text/javascript" src="assets/javascript/giphy3.js"></script> -->
 </body>
+
 </html>
