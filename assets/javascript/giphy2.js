@@ -1,4 +1,4 @@
-var activities = ["ski", "swim", "bike", "snorkel"];
+var activities = ["ski", "swim", "bike", "snorkel", "hike", "paddleboard", "jetski"];
 console.log(activities)
 
 // adding changes below - function display Activity Images

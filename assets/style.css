@@ -29,13 +29,15 @@ label {
       font-size:36px;
   }
 
-  .user-area {
+  #user-area {
       margin: 40px;
    
   }
 
-  #user-input {
+input {
     font-size:16px;
+
+  
   }
   #add-activity
   { background-color: white; 
@@ -53,3 +55,4 @@ label {
     border: rgb(4, 36, 50) 1.5px solid;
     color: white;
   }
+ 
